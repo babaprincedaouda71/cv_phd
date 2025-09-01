@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Prince Baba Daouda Coulibaly</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 20px;
+        }
+        
+        .header-left {
+            flex: 1;
+        }
+        
+        .name {
+            font-size: 28px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .title {
+            font-size: 18px;
+            font-weight: 500;
+            color: #34495e;
+            margin-bottom: 15px;
+        }
+        
+        .contact {
+            font-size: 14px;
+            color: #7f8c8d;
+            line-height: 1.4;
+        }
+        
+        .contact a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        
+        .photo-placeholder {
+            width: 120px;
+            height: 150px;
+            border: 2px dashed #bdc3c7;
+            background-color: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #7f8c8d;
+            text-align: center;
+            margin-left: 20px;
+            flex-shrink: 0;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 5px;
+        }
+        
+        .profile-text {
+            text-align: justify;
+            font-size: 15px;
+            line-height: 1.7;
+            color: #34495e;
+        }
+        
+        .research-areas {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .research-areas li {
+            padding: 8px 0;
+            padding-left: 15px;
+            border-left: 3px solid #3498db;
+            margin-bottom: 8px;
+            background-color: #f8f9fa;
+            font-size: 14px;
+        }
+        
+        .education-item, .experience-item {
+            margin-bottom: 25px;
+        }
+        
+        .institution {
+            font-weight: 600;
+            font-size: 16px;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .degree {
+            font-style: italic;
+            font-size: 15px;
+            color: #34495e;
+            margin-bottom: 5px;
+        }
+        
+        .date {
+            font-weight: 500;
+            color: #7f8c8d;
+            font-size: 14px;
+            float: right;
+        }
+        
+        .details {
+            font-size: 14px;
+            color: #34495e;
+            margin-top: 8px;
+        }
+        
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+        
+        .company {
+            font-weight: 600;
+            font-size: 16px;
+            color: #2c3e50;
+        }
+        
+        .position {
+            font-style: italic;
+            font-size: 14px;
+            color: #34495e;
+        }
+        
+        .responsibilities {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+        
+        .responsibilities li {
+            padding: 5px 0;
+            padding-left: 15px;
+            position: relative;
+            font-size: 14px;
+            color: #34495e;
+        }
+        
+        .responsibilities li:before {
+            content: "•";
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .skill-category {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .skill-category h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+        
+        .skill-category p {
+            font-size: 13px;
+            color: #34495e;
+            line-height: 1.5;
+        }
+        
+        .languages {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .language-item {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .language-name {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 3px;
+        }
+        
+        .language-level {
+            font-size: 13px;
+            color: #7f8c8d;
+        }
+        
+        .objectives {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #2c3e50;
+            border-radius: 5px;
+        }
+        
+        .objectives h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        .objectives p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #34495e;
+            margin-bottom: 10px;
+        }
+        
+        @media print {
+            body {
+                padding: 20px;
+                font-size: 12px;
+            }
+            .name {
+                font-size: 24px;
+            }
+            .section-title {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <h1 class="name">Prince Baba Daouda Coulibaly</h1>
+            <h2 class="title">Candidat au Doctorat en Cloud Computing - Recherche en Infrastructures Souveraines</h2>
+            <div class="contact">
+                📧 princebabadaouda.coulibaly@gmail.com | 
+                💼 <a href="#">LinkedIn</a> | 
+                🔗 <a href="#">GitHub</a> | 
+                📱 +212 693823094
+            </div>
+        </div>
+        <div class="photo-placeholder">
+            PHOTO<br>
+            PROFESSIONNELLE<br>
+            3x4 cm
+        </div>
+    </div>
+
+    <div class="section">
+        <h3 class="section-title">PROFIL RECHERCHE</h3>
+        <p class="profile-text">
+            Titulaire d'un Master en Ingénierie Informatique, Big Data et Cloud Computing (juillet 2024), je souhaite poursuivre mes recherches par un doctorat axé sur le développement d'infrastructures cloud souveraines pour l'Afrique. Mon parcours allie expertise technique approfondie en développement FullStack et DevOps, avec une vision stratégique des enjeux de souveraineté numérique et plusieurs projets concrets déployés en production.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3 class="section-title">DOMAINE DE RECHERCHE</h3>
+        <ul class="research-areas">
+            <li><strong>Cloud Computing souverain et distribué</strong> pour les contextes africains</li>
+            <li><strong>Architectures hybrides</strong> combinant cloud centralisé et edge computing</li>
+            <li><strong>Solutions open-source</strong> pour l'indépendance technologique</li>
+            <li><strong>Optimisation des performances</strong> et sécurité des systèmes distribués</li>
+            <li><strong>Modèles économiquement viables</strong> adaptés aux réalités locales</li>
+            <li><strong>Microservices et conteneurisation</strong> pour la scalabilité des systèmes</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h3 class="section-title">FORMATION</h3>
+        
+        <div class="education-item">
+            <div class="institution">ENSET Mohammedia - École Normale Supérieure de l'Enseignement Technique</div>
+            <div class="degree">Master en Ingénierie Informatique, Big Data et Cloud Computing</div>
+            <span class="date">Juillet 2024</span>
+            <div class="details">
+                <strong>Matières spécialisées :</strong> Big Data, Architecture JEE et Middleware, DevOps, Machine Learning, Systèmes Distribués, IoT, Recherche Opérationnelle<br>
+                <strong>Focus recherche :</strong> Architectures cloud distribuées et souveraineté numérique
+            </div>
+        </div>
+
+        <div class="education-item">
+            <div class="institution">EST Casablanca - École Supérieure de Technologie</div>
+            <div class="degree">Licence en Génie Logiciel et Administration Avancée des Systèmes et Réseaux</div>
+            <span class="date">Juillet 2021</span>
+            <div class="details">
+                <strong>Matières clés :</strong> Génie Logiciel, POO avancée avec Java, Réseaux étendus, Administration systèmes<br>
+                <strong>Spécialisation :</strong> Architectures distribuées et administration réseau avancée
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3 class="section-title">EXPÉRIENCE PROFESSIONNELLE</h3>
+        
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <div class="company">Galaxy Solutions</div>
+                    <div class="position">Ingénieur Développement - Système de Gestion de Formation (Angular, Java)</div>
+                </div>
+                <div class="date">Février 2024 – Août 2024</div>
+            </div>
+            <ul class="responsibilities">
+                <li>Analyse et conception : Développement d'applications à partir d'exigences fonctionnelles complexes</li>
+                <li>Architecture API : Développement d'API RESTful robustes et scalables</li>
+                <li>Frontend avancé : Interfaces utilisateur réactives avec Angular et TypeScript</li>
+                <li>DevOps et intégration : Mise en œuvre de pipelines CI/CD avec GitLab CI pour déploiement automatisé</li>
+                <li>Technologies : Spring Boot, Angular, Docker, Kubernetes, GitLab CI</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <div class="company">AlloExpert</div>
+                    <div class="position">Développeur Full Stack - Application de E-Commerce (Angular, Java)</div>
+                </div>
+                <div class="date">Mai 2021 – Juillet 2021</div>
+            </div>
+            <ul class="responsibilities">
+                <li>Architecture full-stack : Développement interface utilisateur et composants serveur</li>
+                <li>Intégrations système : Gestion des opérations serveur et intégration systèmes de paiement</li>
+                <li>Sécurité : Implémentation de mesures de sécurité pour transactions en ligne</li>
+                <li>Base de données : Conception et optimisation de structures de données</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <div class="company">LA PAUSE COM</div>
+                    <div class="position">Stagiaire Développeur - Plateforme de Gestion de Stock (Django)</div>
+                </div>
+                <div class="date">Mai 2020 – Juillet 2020</div>
+            </div>
+            <ul class="responsibilities">
+                <li>Architecture et développement : Conception et développement complet d'une plateforme de gestion de stock avec Django</li>
+                <li>Fonctionnalités métier : Implémentation de la gestion des entrées/sorties de stock, suivi des niveaux et génération de rapports</li>
+                <li>Base de données : Conception d'une architecture de données sécurisée et optimisée pour le stockage des informations de stock</li>
+                <li>Intégrité des données : Mise en place de mécanismes pour assurer la cohérence et la fiabilité des informations stockées</li>
+                <li>Interface utilisateur : Développement d'une interface conviviale et intuitive avec fonctionnalités interactives</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3 class="section-title">COMPÉTENCES TECHNIQUES</h3>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>Cloud & DevOps</h4>
+                <p>Docker • Kubernetes • CI/CD • GitLab CI • Ansible • Monitoring • Déploiement automatisé</p>
+            </div>
+            <div class="skill-category">
+                <h4>Développement Backend</h4>
+                <p>Java • Spring Boot • Python • Django • FastAPI • C++ • API RESTful • Microservices</p>
+            </div>
+            <div class="skill-category">
+                <h4>Développement Frontend</h4>
+                <p>Angular 2+ • TypeScript • JavaScript • HTML5 • CSS3 • Interfaces réactives</p>
+            </div>
+            <div class="skill-category">
+                <h4>Big Data & Systèmes Distribués</h4>
+                <p>Hadoop • Spark • Architectures microservices • Systèmes distribués • Cloud computing</p>
+            </div>
+            <div class="skill-category">
+                <h4>DevOps & Méthodologies</h4>
+                <p>Scrum • SAFe • Kanban • Intégration continue • Déploiement continu • GitLab CI</p>
+            </div>
+            <div class="skill-category">
+                <h4>Systèmes & Bases de Données</h4>
+                <p>Linux Ubuntu • Windows • MySQL • Bases de données distribuées • Administration système</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3 class="section-title">COMPÉTENCES TRANSVERSALES</h3>
+        <p><strong>Recherche & Innovation</strong> • <strong>Leadership technique</strong> • <strong>Autonomie</strong> • <strong>Adaptabilité</strong> • <strong>Communication technique</strong> • <strong>Gestion de projet</strong> • <strong>Collaboration interdisciplinaire</strong> • <strong>Résolution de problèmes complexes</strong></p>
+    </div>
+
+    <div class="section">
+        <h3 class="section-title">LANGUES</h3>
+        <div class="languages">
+            <div class="language-item">
+                <div class="language-name">Français</div>
+                <div class="language-level">Courant (technique et académique)</div>
+            </div>
+            <div class="language-item">
+                <div class="language-name">Anglais</div>
+                <div class="language-level">Professionnel (documentation technique, communication internationale)</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3 class="section-title">OBJECTIFS DOCTORAUX</h3>
+        <div class="objectives">
+            <h4>Vision de recherche</h4>
+            <p>Mon projet de doctorat vise à <strong>explorer et concevoir des modèles de cloud souverain</strong> adaptés aux contextes africains, combinant innovation technologique et viabilité économique. Fort de mon expérience pratique en développement cloud et DevOps, j'ambitionne de contribuer au développement d'un écosystème numérique local autonome.</p>
+            
+            <h4>Contribution attendue</h4>
+            <p>Recherche fondamentale et appliquée combinant expertise technique pratique et innovation académique, avec un fort potentiel de transfert technologique vers l'industrie et les institutions publiques africaines. Développement d'architectures cloud hybrides utilisant des technologies open-source pour créer des infrastructures souveraines, économiquement viables et techniquement performantes.</p>
+        </div>
+    </div>
+</body>
+</html>
